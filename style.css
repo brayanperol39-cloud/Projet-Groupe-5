@@ -2,62 +2,223 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; 
 }
 
 
+
+
 .banner-container {
-    
-    background-image: url('images/homme_sneakers_roue\ 2.png');
-    
-    
+    background-image: url('images/homme_sneakers_roue 2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     
     
-    width: 1536px;
-    height: 724px; 
+    width: 1500px;
+    height: 675px;
     
     
     display: flex;
     justify-content: center;
-    align-items: flex-end;   
+    align-items: flex-end;
     
     padding-bottom: 50px;
-    box-sizing: border-box;
-
-    margin: auto;
+    position: relative; 
+    margin: 0 auto; 
 }
 
 
 .btn-cta {
-    background-color: #EE3124; 
+    background-color: #EE3124;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-    
-   
     padding: 15px 40px;
-    border-radius: 50px; 
-    
-    
+    border-radius: 50px;
     transition: transform 0.2s ease, background-color 0.2s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-
 .btn-cta:hover {
-    background-color: #0aa016;
+    background-color: #08b63f;
     transform: scale(1.05);
 }
 
+
 .logo-top-right {
-    position: absolute; 
-    top: 30px;          
-    right: 30px;        
-    width: 200px;       
-    height: auto;       
-    z-index: 10;        
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+}
+
+
+body.page-jeu {
+    height: 100vh;
+    
+    background: linear-gradient(90deg, #383838 30%, #EE3124 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.logo-box {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    width: 80px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.logo-box img {
+    width: 100%;
+    display: block;
+}
+
+
+.page-jeu .logo-box {
+    top: 20px;
+    left: 20px;
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.wheel-wrapper {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.wheel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.pointer {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 40px solid black;
+    z-index: 10;
+}
+
+.btn-spin {
+    background-color: #EE3124;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-style: italic;
+    padding: 15px 60px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-spin:hover {
+    background-color: #08a31a;
+    transform: scale(1.05);
+}
+
+
+
+
+body.page-inscription {
+    height: 100vh;
+}
+
+.bg-container {
+    
+    background-image: url('images/foot_locker_roue_sneakers_v2\ 2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.page-inscription .logo-box {
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #383838;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: #EE3124;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #089e21;
+    transform: scale(1.05);
 }
