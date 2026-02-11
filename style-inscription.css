@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+
+.bg-container {
+   
+    background-image: url('images/foot_locker_roue_sneakers_v2\ 2.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 100%;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: 15px;
+    width: 80px;
+}
+
+.logo-box img {
+    width: 100%;
+    display: block;
+}
+
+
+.form-wrapper {
+    width: 100%;
+    max-width: 450px; 
+    padding: 20px;
+}
+
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: block; 
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+
+input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 50px; 
+    border: none;
+    background-color: #383838; 
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+
+input::placeholder {
+    color: #888;
+}
+
+
+.btn-submit {
+    display: inline-block;
+    background-color: #EE3124;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #08860f;
+    transform: scale(1.05);
+}
