@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La roue tourne... - Foot Locker</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/logo footlocker.webp">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+<body class="page-tourne">
+
+    <div class="logo-box">
+        <img src="images/logo footlocker.webp" alt="Logo Foot Locker">
+    </div>
+
+    <main class="game-container">
+        
+        <div class="wheel-wrapper">
+            <img src="images/Roue.png" alt="Roue qui tourne" class="wheel-image spinning-fast">
+            <div class="pointer-bottom"></div>
+        </div>
+
+        <div class="spinning-text">LA ROUE TOURNE...</div>
+
+    </main>
+
+    <script>
+        // setTimeout permet d'attendre avant de lancer une action (ici 3000 millisecondes = 3 secondes)
+        setTimeout(function() {
+            
+            // Math.random() génère un nombre au hasard entre 0 et 1 (ex: 0.45, 0.89, etc.)
+            const tirage = Math.random();
+            
+            // --- RÉGLAGE DES PROBABILITÉS ---
+            // Si le nombre est inférieur à 0.8, c'est PERDU (donc 80% de chance)
+            // Si le nombre est supérieur ou égal à 0.8, c'est GAGNÉ (donc 20% de chance)
+            
+            if (tirage < 0.8) {
+                // Redirection vers la page Perdu
+                window.location.href = "perdu.html"; 
+            } else {
+                // Redirection vers la page Gagné
+                window.location.href = "gagne.html"; 
+            }
+            
+        }, 3000); 
+    </script>
+
+</body>
+</html>

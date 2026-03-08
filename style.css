@@ -222,3 +222,369 @@ input::placeholder {
     background-color: #089e21;
     transform: scale(1.05);
 }
+
+/* =========================================
+   5. PAGE PERDU (perdu.html)
+   ========================================= */
+
+/* Configuration de la page et fond dégradé (marron vers gris) */
+body.page-perdu {
+    height: 100vh;
+    background: linear-gradient(135deg, #6b4c4a 0%, #4a4a4a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* On s'assure que le logo est bien placé */
+.page-perdu .logo-box {
+    top: 20px;
+    left: 20px;
+}
+
+/* Le conteneur qui centre les textes et l'image */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px; /* Espace entre les éléments */
+}
+
+/* Les textes avec la police style "Pochoir/Stencil" */
+.result-title, .result-subtitle {
+    color: white;
+    /* On utilise la police Stencil si elle est sur l'ordi, sinon Impact */
+    font-family: "Stencil Std", "Stencil", "Impact", sans-serif; 
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.result-title {
+    font-size: 2.8rem;
+}
+
+.result-subtitle {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* La boîte carrée jaune pâle qui contient l'image du tampon */
+.stamp-image {
+    width: 320px;
+    height: 320px;
+    background-color: #f5eed3; /* Le fond beige/jaune de l'image */
+    border-radius: 20px; /* Coins arrondis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.stamp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajuste l'image sans la déformer */
+}
+
+/* Bouton Réessayer */
+.btn-retry {
+    background-color: #EE3124;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-family: "Stencil Std", "Stencil", "Impact", sans-serif; /* Même police que le titre */
+    letter-spacing: 2px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-retry:hover {
+    background-color: #c4261b;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   6. PAGE GAGNÉ (gagne.html)
+   ========================================= */
+
+/* On réutilise le même fond dégradé que la page Perdu */
+body.page-gagne {
+    height: 100vh;
+    background: linear-gradient(135deg, #6b4c4a 0%, #4a4a4a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Positionnement du logo */
+.page-gagne .logo-box {
+    top: 20px;
+    left: 20px;
+}
+
+/* Styles des textes (Titre et Sous-titre) - Police épaisse et italique */
+.page-gagne .result-title, 
+.page-gagne .result-subtitle {
+    color: white;
+    font-family: "Impact", "Arial Black", sans-serif; /* Police épaisse */
+    font-style: italic; /* Pour reproduire l'effet penché de ton image */
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.page-gagne .result-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.page-gagne .result-subtitle {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* La boîte avec les bords arrondis pour l'image du porte-clé */
+.prize-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden; /* Coupe l'image si elle dépasse les bords arrondis */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.prize-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* S'assure que l'image remplit bien le carré */
+}
+
+/* Conteneur pour aligner les deux boutons côte à côte */
+.action-buttons {
+    display: flex;
+    gap: 20px; /* Espace entre les deux boutons */
+    justify-content: center;
+}
+
+/* Base commune pour les boutons de cette page */
+.btn-collect, .btn-share {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-style: italic;
+    padding: 12px 35px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton rouge (Récolter) */
+.btn-collect {
+    background-color: #EE3124;
+    color: white;
+}
+
+.btn-collect:hover {
+    background-color: #c4261b;
+    transform: scale(1.05);
+}
+
+/* Bouton noir (Partager) */
+.btn-share {
+    background-color: black;
+    color: #EE3124; /* Texte en rouge */
+}
+
+.btn-share:hover {
+    background-color: #222; /* Gris très foncé au survol */
+    transform: scale(1.05);
+}
+
+/* =========================================
+   7. PAGE LA ROUE TOURNE (tourne.html)
+   ========================================= */
+
+/* On reprend le même fond que la page Jeu classique */
+body.page-tourne {
+    height: 100vh;
+    background: linear-gradient(90deg, #383838 30%, #EE3124 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page-tourne .logo-box {
+    top: 20px;
+    left: 20px;
+}
+
+/* Animation de rotation TRÈS rapide avec un effet de flou */
+.spinning-fast {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* L'animation fait un tour complet en 0.2 seconde, à l'infini */
+    animation: spin-wheel 0.2s linear infinite;
+    /* Effet de flou de mouvement */
+    filter: blur(5px); 
+}
+
+/* La règle d'animation CSS de 0 à 360 degrés */
+@keyframes spin-wheel {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Le curseur en bas (triangle noir pointant vers le haut) */
+.pointer-bottom {
+    position: absolute;
+    bottom: -15px;      /* Placé en bas de la roue */
+    left: 50%;          /* Centré horizontalement */
+    transform: translateX(-50%);
+    
+    /* Technique CSS pour faire un triangle pointant vers le haut */
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid black;
+    z-index: 10;
+}
+
+/* Le bandeau "LA ROUE TOURNE........." */
+.spinning-text {
+    background-color: #EE3124;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-style: italic;
+    padding: 15px 50px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Petite animation optionnelle de clignotement pour le suspense */
+    animation: pulse-text 0.8s infinite alternate;
+}
+
+@keyframes pulse-text {
+    0% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* =========================================
+   8. PAGE MES GAINS (gains.html)
+   ========================================= */
+
+/* Le fond dégradé du rouge très foncé vers le noir */
+body.page-gains {
+    height: 100vh;
+    background: linear-gradient(to bottom, #2b0a0a 0%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.page-gains .logo-box {
+    top: 20px;
+    left: 20px;
+}
+
+/* Conteneur central */
+.gains-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Le titre MES GAINS */
+.gains-title {
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* La liste qui contient toutes les lignes */
+.gains-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace vertical entre chaque ligne de gain */
+}
+
+/* Une ligne (Contient le nom du gain à gauche et le bouton à droite) */
+.gain-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espace horizontal entre l'étiquette et le bouton */
+}
+
+/* L'étiquette grise avec le nom du lot */
+.gain-name {
+    background-color: #dcdcdc; /* Gris clair */
+    color: black;
+    font-family: "Impact", "Arial Black", sans-serif; /* Police condensée */
+    font-size: 1.4rem;
+    padding: 15px 20px;
+    border-radius: 10px; /* Bords légèrement arrondis */
+    width: 350px; /* Largeur fixe pour que tout soit bien aligné */
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Le style de base du bouton RECOLTE */
+.gain-btn {
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Bouton inactif (Gris foncé) */
+.gain-btn.inactive {
+    background-color: #555555;
+    color: white;
+}
+
+/* Bouton actif (Vert fluo) */
+.gain-btn.active {
+    background-color: #39ff14; /* Vert vif */
+    color: white;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4); /* Légère lueur verte */
+}
+
+.gain-btn:hover {
+    transform: scale(1.05); /* Grossit au survol */
+}
+
+/* Le lien "Règlements du jeu" tout en bas */
+.rules-link {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    text-decoration: underline; /* Souligné */
+    font-family: "Georgia", "Times New Roman", serif; /* Police type manuscrite/sérieuse */
+    font-style: italic; /* En italique */
+    font-size: 1.2rem;
+}
+
+.rules-link:hover {
+    color: #EE3124; /* Devient rouge Foot Locker au survol */
+}
